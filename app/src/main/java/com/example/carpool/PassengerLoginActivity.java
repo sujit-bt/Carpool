@@ -61,7 +61,9 @@ public class PassengerLoginActivity extends AppCompatActivity {
                 email = mEmail.getText().toString();
                 password = mPassword.getText().toString();
 
-                if (email != "" && password != "") {
+                if (email.isEmpty() || password.isEmpty()) {
+                    Toast.makeText(PassengerLoginActivity.this, "Please enter email and Password.", Toast.LENGTH_SHORT).show();
+                } else {
                     mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(PassengerLoginActivity.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
@@ -74,8 +76,6 @@ public class PassengerLoginActivity extends AppCompatActivity {
                             }
                         }
                     });
-                } else {
-                    Toast.makeText(PassengerLoginActivity.this, "Please enter email and Password.", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -86,7 +86,9 @@ public class PassengerLoginActivity extends AppCompatActivity {
                 email = mEmail.getText().toString();
                 password = mPassword.getText().toString();
 
-                if (email != "" && password != "") {
+                if (email.isEmpty() || password.isEmpty()) {
+                    Toast.makeText(PassengerLoginActivity.this, "Please enter email and Password.", Toast.LENGTH_SHORT).show();
+                } else {
                     mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(PassengerLoginActivity.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
@@ -97,8 +99,6 @@ public class PassengerLoginActivity extends AppCompatActivity {
                             }
                         }
                     });
-                } else {
-                    Toast.makeText(PassengerLoginActivity.this, "Please enter email and Password.", Toast.LENGTH_SHORT).show();
                 }
 
             }
