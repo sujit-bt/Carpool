@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -19,16 +20,35 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+/**
+ * A Class controlling the processes of passenger login screen of the app
+ *
+ * @author Sujit Patil
+ * @since JDK 11.0.10
+ * @version 1.0
+ *
+ */
 public class PassengerLoginActivity extends AppCompatActivity {
 
-    EditText mEmail, mPassword;
+    // The email and password input fields
+    TextView mEmail, mPassword;
+    // Login and register buttons
     Button mLogin, mRegister;
 
+    // Email and password strings from the two textviews
     private String email, password;
 
+    // Object that lets the code connect to the Firebase database
     FirebaseAuth mAuth;
+    // Object that listens to any changes in the login/logout status
     FirebaseAuth.AuthStateListener mAuthStateListener;
 
+    /**
+     * This function is called when the DriverLoginActivity is first created
+     *
+     * @param savedInstanceState - Stores the most recent data of the activity.
+     *
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,11 +61,16 @@ public class PassengerLoginActivity extends AppCompatActivity {
         mLogin = (Button) findViewById(R.id.login);
         mRegister = (Button) findViewById(R.id.register);
 
+        // Listens for any changes in login/logout status
         mAuthStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
+                /*
+                only runs when user != null
+                It won't run when user logs out and will run when user logs in
+                */
                 if (user != null) {
                     Intent intent = new Intent(PassengerLoginActivity.this, TEMPLATE.class);
                     startActivity(intent);
@@ -55,15 +80,21 @@ public class PassengerLoginActivity extends AppCompatActivity {
             }
         };
 
+        // Controls what happens when the register button is clicked
         mRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                // gets the email and password strings from the textviews
                 email = mEmail.getText().toString();
                 password = mPassword.getText().toString();
 
+                // if the fields are empty a warning will be sent out and user is not registered
                 if (email.isEmpty() || password.isEmpty()) {
                     Toast.makeText(PassengerLoginActivity.this, "Please enter email and Password.", Toast.LENGTH_SHORT).show();
                 } else {
+
+                    // creates a user in firebase database
                     mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(PassengerLoginActivity.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
@@ -80,15 +111,21 @@ public class PassengerLoginActivity extends AppCompatActivity {
             }
         });
 
+        // Controls what happens when the login button is clicked
         mLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                // gets the email and password strings from the textviews
                 email = mEmail.getText().toString();
                 password = mPassword.getText().toString();
 
+                // if the fields are empty a warning will be sent out
                 if (email.isEmpty() || password.isEmpty()) {
                     Toast.makeText(PassengerLoginActivity.this, "Please enter email and Password.", Toast.LENGTH_SHORT).show();
                 } else {
+
+                    // logs in user in firebase database if the password and email matches to an existing user
                     mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(PassengerLoginActivity.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
@@ -105,12 +142,18 @@ public class PassengerLoginActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Method called when the activity starts, called after onCreate()
+     */
     @Override
     protected void onStart() {
         super.onStart();
         mAuth.addAuthStateListener(mAuthStateListener);
     }
 
+    /**
+     * Called before the activity is stopped
+     */
     @Override
     protected void onStop() {
         super.onStop();

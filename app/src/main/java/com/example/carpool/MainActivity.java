@@ -7,10 +7,25 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+/**
+ * A Class controlling the processes of main starting screen of the app
+ *
+ * @author Sujit Patil
+ * @since JDK 11.0.10
+ * @version 1.0
+ *
+ */
 public class MainActivity extends AppCompatActivity {
 
+    // "I am a driver" and "I am a passenger" buttons
     private Button mDriver, mPassenger;
 
+    /**
+     * This function is called when the MainActivity is first created
+     *
+     * @param savedInstanceState - Stores the most recent data of the activity.
+     *
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         mDriver = (Button) findViewById(R.id.driver);
         mPassenger = (Button) findViewById(R.id.passengerHeader);
 
+        // Controls what happens when the "I am a Driver" button is clicked
         mDriver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -29,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // Controls what happens when the "I am a Passenger" button is clicked
         mPassenger.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
