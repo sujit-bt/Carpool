@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Carpool</string>
+    <string name="i_am_a_driver">I am a Driver</string>
+    <string name="i_am_a_passenger">I am a Passenger</string>
+    <string name="who_are_you">Who are you?</string>
+    <string name="passenger">Passenger</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+</resources>
