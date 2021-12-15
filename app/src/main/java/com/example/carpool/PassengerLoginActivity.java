@@ -32,8 +32,8 @@ public class PassengerLoginActivity extends AppCompatActivity {
 
     // The email and password input fields
     TextView mEmail, mPassword;
-    // Login and register buttons
-    Button mLogin, mRegister;
+    // Login, register, and back buttons
+    Button mLogin, mRegister, mBack;
 
     // Email and password strings from the two textviews
     private String email, password;
@@ -60,6 +60,7 @@ public class PassengerLoginActivity extends AppCompatActivity {
         mPassword = (EditText) findViewById(R.id.password);
         mLogin = (Button) findViewById(R.id.login);
         mRegister = (Button) findViewById(R.id.register);
+        mBack = (Button) findViewById(R.id.back);
 
         // Listens for any changes in login/logout status
         mAuthStateListener = new FirebaseAuth.AuthStateListener() {
@@ -138,6 +139,16 @@ public class PassengerLoginActivity extends AppCompatActivity {
                     });
                 }
 
+            }
+        });
+
+        mBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PassengerLoginActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+                return;
             }
         });
     }
