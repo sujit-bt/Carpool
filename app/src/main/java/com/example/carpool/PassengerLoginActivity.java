@@ -95,7 +95,7 @@ public class PassengerLoginActivity extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 System.out.println("suCCesSS");
                             } else {
-                                Toast.makeText(PassengerLoginActivity.this, "FAILED TO REGISTER USER!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(PassengerLoginActivity.this, "FAILED TO LOGIN USER!", Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
