@@ -139,9 +139,12 @@ public class DriverLoginActivity extends AppCompatActivity {
             }
         });
 
+        // controls the functions of the Back button
         mBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                // Switched the activity to the main activity
                 Intent intent = new Intent(DriverLoginActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();

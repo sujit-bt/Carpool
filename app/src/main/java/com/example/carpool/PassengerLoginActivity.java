@@ -142,9 +142,12 @@ public class PassengerLoginActivity extends AppCompatActivity {
             }
         });
 
+        // Controls the functions of the back button
         mBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                // Switches the activity to the main activity
                 Intent intent = new Intent(PassengerLoginActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();
