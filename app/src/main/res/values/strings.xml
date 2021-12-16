@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Carpool</string>
+    <string name="app_name">RideShare</string>
     <string name="i_am_a_driver">I am a Driver</string>
     <string name="i_am_a_passenger">I am a Passenger</string>
     <string name="who_are_you">Who are you?</string>
