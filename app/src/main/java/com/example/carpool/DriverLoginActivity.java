@@ -31,8 +31,8 @@ public class DriverLoginActivity extends AppCompatActivity {
 
     // The email and password input fields
     TextView mEmail, mPassword;
-    // Login, register, back buttons
-    Button mLogin, mRegister, mBack;
+    // Login and register buttons
+    Button mLogin, mRegister;
 
     // Email and password strings from the two textviews
     private  String email, password;
@@ -59,7 +59,6 @@ public class DriverLoginActivity extends AppCompatActivity {
         mPassword = (EditText) findViewById(R.id.password);
         mLogin = (Button) findViewById(R.id.login);
         mRegister = (Button) findViewById(R.id.register);
-        mBack = (Button) findViewById(R.id.back);
 
         // Listens for any changes in login/logout status
         mAuthStateListener = new FirebaseAuth.AuthStateListener() {
@@ -138,19 +137,18 @@ public class DriverLoginActivity extends AppCompatActivity {
 
             }
         });
+    }
 
-        // controls the functions of the Back button
-        mBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                // Switched the activity to the main activity
-                Intent intent = new Intent(DriverLoginActivity.this, MainActivity.class);
-                startActivity(intent);
-                finish();
-                return;
-            }
-        });
+    /**
+     * Controls the function of the back button
+     */
+    @Override
+    public void onBackPressed() {
+        // Switches the activity to the main activity
+        Intent intent = new Intent(DriverLoginActivity.this, MainActivity.class);
+        startActivity(intent);
+        finish();
+        return;
     }
 
     /**
