@@ -147,6 +147,7 @@ public class DriverLoginActivity extends AppCompatActivity {
         // Switches the activity to the main activity
         Intent intent = new Intent(DriverLoginActivity.this, MainActivity.class);
         startActivity(intent);
+        
         finish();
         return;
     }
