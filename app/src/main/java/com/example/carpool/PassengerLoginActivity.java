@@ -32,7 +32,7 @@ public class PassengerLoginActivity extends AppCompatActivity {
 
     // The email and password input fields
     TextView mEmail, mPassword;
-    // Login, register, and back buttons
+    // Login and back buttons
     Button mLogin, mRegister;
 
     // Email and password strings from the two textviews
@@ -60,7 +60,7 @@ public class PassengerLoginActivity extends AppCompatActivity {
         mPassword = (EditText) findViewById(R.id.password);
         mLogin = (Button) findViewById(R.id.login);
         mRegister = (Button) findViewById(R.id.register);
-        
+
         // Listens for any changes in login/logout status
         mAuthStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
@@ -72,7 +72,7 @@ public class PassengerLoginActivity extends AppCompatActivity {
                 It won't run when user logs out and will run when user logs in
                 */
                 if (user != null) {
-                    Intent intent = new Intent(PassengerLoginActivity.this, TEMPLATE.class);
+                    Intent intent = new Intent(PassengerLoginActivity.this, MapsActivity.class);
                     startActivity(intent);
                     finish();
                     return;
