@@ -72,7 +72,7 @@ public class PassengerLoginActivity extends AppCompatActivity {
                 It won't run when user logs out and will run when user logs in
                 */
                 if (user != null) {
-                    Intent intent = new Intent(PassengerLoginActivity.this, MapsActivity.class);
+                    Intent intent = new Intent(PassengerLoginActivity.this, TEMPLATE.class);
                     startActivity(intent);
                     finish();
                     return;
