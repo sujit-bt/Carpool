@@ -102,8 +102,8 @@ public class PassengerLoginActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
                                 String user_id = mAuth.getCurrentUser().getUid();
-                                DatabaseReference passengers = FirebaseDatabase.getInstance().getReference().child("Users").child("Passengers");
-                                passengers.child(user_id).setValue(true);
+                                DatabaseReference user = FirebaseDatabase.getInstance().getReference().child("Users").child("Passengers").child(user_id);
+                                user.setValue(true);
                             } else {
                                 Toast.makeText(PassengerLoginActivity.this, "FAILED TO REGISTER USER!", Toast.LENGTH_SHORT).show();
                             }
