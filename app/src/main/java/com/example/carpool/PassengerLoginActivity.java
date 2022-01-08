@@ -3,9 +3,9 @@ package com.example.carpool;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -89,6 +89,8 @@ public class PassengerLoginActivity extends AppCompatActivity {
                 email = mEmail.getText().toString();
                 password = mPassword.getText().toString();
 
+                PersonInfo passengerInfo = new PersonInfo("Here", "there", false);
+
                 // if the fields are empty a warning will be sent out and user is not registered
                 if (email.isEmpty() || password.isEmpty()) {
                     Toast.makeText(PassengerLoginActivity.this, "Please enter email and Password.", Toast.LENGTH_SHORT).show();
@@ -100,8 +102,8 @@ public class PassengerLoginActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
                                 String user_id = mAuth.getCurrentUser().getUid();
-                                DatabaseReference current_user = FirebaseDatabase.getInstance().getReference().child("Users").child("Passengers").child(user_id);
-                                current_user.setValue(true);
+                                DatabaseReference passengers = FirebaseDatabase.getInstance().getReference().child("Users").child("Passengers");
+                                passengers.child(user_id).setValue(true);
                             } else {
                                 Toast.makeText(PassengerLoginActivity.this, "FAILED TO REGISTER USER!", Toast.LENGTH_SHORT).show();
                             }
