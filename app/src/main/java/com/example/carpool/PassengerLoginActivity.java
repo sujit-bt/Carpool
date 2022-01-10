@@ -89,8 +89,6 @@ public class PassengerLoginActivity extends AppCompatActivity {
                 email = mEmail.getText().toString();
                 password = mPassword.getText().toString();
 
-                PersonInfo passengerInfo = new PersonInfo("Here", "there", false);
-
                 // if the fields are empty a warning will be sent out and user is not registered
                 if (email.isEmpty() || password.isEmpty()) {
                     Toast.makeText(PassengerLoginActivity.this, "Please enter email and Password.", Toast.LENGTH_SHORT).show();
