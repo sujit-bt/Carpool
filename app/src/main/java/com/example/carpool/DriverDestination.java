@@ -15,8 +15,8 @@ public class DriverDestination extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_driver_destination);
 
-        mDirection = (Button) findViewById(R.id.direction);
-        mLogout = (Button) findViewById(R.id.logout);
+        mDirection = (Button) findViewById(R.id.directionToDriverDestination);
+        mLogout = (Button) findViewById(R.id.driverLogout);
 
         mDirection.setOnClickListener(new View.OnClickListener() {
             @Override

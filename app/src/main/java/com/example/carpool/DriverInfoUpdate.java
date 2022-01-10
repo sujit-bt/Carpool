@@ -16,7 +16,7 @@ public class DriverInfoUpdate extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_driver_info_update);
 
-        mSubmit = (Button) findViewById(R.id.submit);
+        mSubmit = (Button) findViewById(R.id.updateDriverInfo);
         mNext = (Button) findViewById(R.id.toDisplayPassengerInfo);
 
         mSubmit.setOnClickListener(new View.OnClickListener() {

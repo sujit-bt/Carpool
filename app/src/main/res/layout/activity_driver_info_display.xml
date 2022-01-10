@@ -113,7 +113,7 @@
         app:layout_constraintTop_toBottomOf="@+id/phoneNumber" />
 
     <Button
-        android:id="@+id/logout"
+        android:id="@+id/passengerLogout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"

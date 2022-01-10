@@ -15,6 +15,9 @@ public class DriverInfoDisplay extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_driver_info_display);
 
+        mRefresh = (Button) findViewById(R.id.refresh);
+        mLogout = (Button) findViewById(R.id.passengerLogout);
+
         mRefresh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
