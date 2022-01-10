@@ -13,4 +13,21 @@
     <string name="title_activity_maps">MapsActivity</string>
     <string name="current_location">Current Location</string>
     <string name="destination">Destination</string>
+    <string name="submit">Submit</string>
+    <string name="logout">Logout</string>
+    <string name="phone">Phone</string>
+    <string name="order">Order</string>
+    <string name="your_passenger">Your Passenger</string>
+    <string name="current_location">Current Location</string>
+    <string name="destination">Destination</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="directions_to_passenger">Directions to Passenger</string>
+    <string name="next">Next</string>
+    <string name="go_to_passenger_s_destination">Go to Passenger\'s Destination</string>
+    <string name="please_enter_your_information">Please enter your information.</string>
+    <string name="your_info">Your Info</string>
+    <string name="your_info">Your Info</string>
+    <string name="please_enter_your_information">Please enter your information.</string>
+    <string name="your_driver">Your Driver</string>
+    <string name="refresh">Refresh</string>
 </resources>

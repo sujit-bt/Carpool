@@ -99,7 +99,7 @@ public class DriverLoginActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
                                 String user_id = mAuth.getCurrentUser().getUid();
-                                DatabaseReference current_user = FirebaseDatabase.getInstance().getReference().child("Users").child("Passengers").child(user_id);
+                                DatabaseReference current_user = FirebaseDatabase.getInstance().getReference().child("Users").child("Drivers").child(user_id);
                                 current_user.setValue(true);
                             } else {
                                 Toast.makeText(DriverLoginActivity.this, "FAILED TO REGISTER USER!", Toast.LENGTH_SHORT).show();
