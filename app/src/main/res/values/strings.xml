@@ -30,4 +30,7 @@
     <string name="please_enter_your_information">Please enter your information.</string>
     <string name="your_driver">Your Driver</string>
     <string name="refresh">Refresh</string>
+    <string name="thank_you">Thank you!</string>
+    <string name="you_have_dropped_off_your_passenger">You have dropped off your passenger!</string>
+    <string name="go_to_your_destination">Go To Your Destination</string>
 </resources>

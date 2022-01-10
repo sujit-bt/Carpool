@@ -71,7 +71,7 @@ public class DriverLoginActivity extends AppCompatActivity {
                 It won't run when user logs out and will run when user logs in
                 */
                 if (user != null) {
-                    Intent intent = new Intent(DriverLoginActivity.this, TEMPLATE.class);
+                    Intent intent = new Intent(DriverLoginActivity.this, DriverInfoUpdate.class);
                     startActivity(intent);
                     finish();
                     return;
