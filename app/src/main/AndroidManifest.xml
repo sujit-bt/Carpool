@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.carpool" >
-    
+    package="com.example.carpool">
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Carpool" >
+        android:theme="@style/Theme.Carpool">
         <activity
-            android:name=".DisplayPassengerInfo"
+            android:name=".PassengerLogout"
             android:exported="false" />
         <activity
-            android:name=".DriverInfoDisplay"
+            android:name=".DriverPassengerInfoDisplay"
+            android:exported="false" />
+        <activity
+            android:name=".PassengerDriverInfoDisplay"
             android:exported="false" />
         <activity
             android:name=".PassengerInfoUpdate"
@@ -47,7 +50,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

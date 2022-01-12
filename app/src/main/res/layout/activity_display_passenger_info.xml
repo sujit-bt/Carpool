@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DisplayPassengerInfo">
+    tools:context=".DriverPassengerInfoDisplay">
 
     <TextView
         android:id="@+id/header"
@@ -16,9 +16,11 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         android:textColor="@color/header_purple"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05" />
 
     <TextView
         android:id="@+id/currentLocationTitle"
@@ -27,15 +29,17 @@
         android:text="@string/current_location"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/header" />
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        app:layout_constraintVertical_bias="0.05" />
 
     <TextView
         android:id="@+id/passengerCurrentLocation"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="1234 Example Street"
+        android:text="@string/waiting_for_passenger"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,7 +61,7 @@
         android:id="@+id/passengerDestination"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="1234 Example Street"
+        android:text="@string/waiting_for_passenger"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintEnd_toEndOf="parent"
@@ -79,7 +83,7 @@
         android:id="@+id/passengerPhoneNumber"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="1234567890"
+        android:text="@string/waiting_for_passenger"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintEnd_toEndOf="parent"
@@ -91,9 +95,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/directions_to_passenger"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passengerPhoneNumber" />
+        app:layout_constraintTop_toBottomOf="@+id/passengerPhoneNumber"
+        app:layout_constraintVertical_bias="0.05" />
 
     <Button
         android:id="@+id/directionToPassengerDestination"

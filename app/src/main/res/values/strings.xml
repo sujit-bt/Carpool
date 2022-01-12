@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">RideShare</string>
+    <string name="app_name">DriveShare</string>
     <string name="i_am_a_driver">I am a Driver</string>
     <string name="i_am_a_passenger">I am a Passenger</string>
     <string name="who_are_you">Who are you?</string>
@@ -29,4 +29,9 @@
     <string name="thank_you">Thank you!</string>
     <string name="you_have_dropped_off_your_passenger">You have dropped off your passenger!</string>
     <string name="go_to_your_destination">Go To Your Destination</string>
+    <string name="waiting_for_driver">Waiting for Driver...</string>
+    <string name="waiting_for_passenger">Waiting for Passenger...</string>
+    <string name="close_app">Close App</string>
+    <string name="logout_nsuccessful">Logout\nSuccessful!</string>
+    <string name="back_to_home">Back to Home</string>
 </resources>
