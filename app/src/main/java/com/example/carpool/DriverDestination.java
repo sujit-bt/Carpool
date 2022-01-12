@@ -59,7 +59,7 @@ public class DriverDestination extends AppCompatActivity {
                 info.logOutUser();
                 user.setValue(info);
                 mAuth.signOut();
-                Intent intent = new Intent(DriverDestination.this, PassengerLogout.class);
+                Intent intent = new Intent(DriverDestination.this, Logout.class);
                 startActivity(intent);
                 finish();
             }
