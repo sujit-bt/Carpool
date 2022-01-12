@@ -1,5 +1,10 @@
 package com.example.carpool;
 
+import com.google.firebase.database.Exclude;
+
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * An object a user.
  * Holds information about the user's current location, destination, phone number, and if the destination is reached.
@@ -12,7 +17,7 @@ public class PersonInfo {
     String cLocation;
     String destination;
     String phoneNumber;
-    boolean reached;
+    String connectedTo;
 
     /**
      * Empty constructor so that this class can be used to connect to Realtime Database.
@@ -27,13 +32,12 @@ public class PersonInfo {
      * @param cLocation the user's current location
      * @param destination the user's destination
      * @param phoneNumber the user's phone number
-     * @param reached boolean value whether the user has reached destination or not
      */
-    public PersonInfo(String cLocation, String destination, String phoneNumber, boolean reached) {
+    public PersonInfo(String cLocation, String destination, String phoneNumber) {
         this.cLocation = cLocation;
         this.destination = destination;
         this.phoneNumber = phoneNumber;
-        this.reached = reached;
+        this.connectedTo = "";
     }
 
     public void setcLocation(String cLocation) {
@@ -60,11 +64,29 @@ public class PersonInfo {
         return this.phoneNumber;
     }
 
-    public void setReached(boolean reached) {
-        this.reached = reached;
+    public void setConnectedTo(String user_id) {
+        this.connectedTo = user_id;
     }
 
-    public boolean getReached() {
-        return this.reached;
+    public String getConnectedTo() {
+        return this.connectedTo;
+    }
+
+    public void logOutUser() {
+        this.cLocation = "logout";
+        this.destination = "logout";
+        this.phoneNumber = "logout";
+        this.connectedTo = "logout";
+    }
+
+    @Exclude
+    public Map<String, Object> toMap() {
+        HashMap<String, Object> result = new HashMap<>();
+        result.put("cLocation", cLocation);
+        result.put("destination", destination);
+        result.put("phoneNumber", phoneNumber);
+        result.put("connectedTo", connectedTo);
+
+        return result;
     }
 }

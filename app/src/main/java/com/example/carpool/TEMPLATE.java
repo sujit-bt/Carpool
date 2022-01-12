@@ -71,7 +71,7 @@ public class TEMPLATE extends AppCompatActivity {
                 if (currentLocation.isEmpty() || destination.isEmpty() || phoneNumber.isEmpty()) {
                     Toast.makeText(TEMPLATE.this, "Please don't enter blank text.", Toast.LENGTH_SHORT).show();
                 } else {
-                    final PersonInfo passengerInfo = new PersonInfo(currentLocation, destination, phoneNumber, false);
+                    final PersonInfo passengerInfo = new PersonInfo(currentLocation, destination, phoneNumber);
                     passengers.child(user_id).setValue(passengerInfo);
                 }
             }

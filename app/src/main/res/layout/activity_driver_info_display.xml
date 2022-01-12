@@ -4,14 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DriverInfoDisplay">
+    tools:context=".PassengerDriverInfoDisplay">
 
     <TextView
         android:id="@+id/header"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="100dp"
         android:layout_marginEnd="50dp"
         android:text="@string/your_driver"
         android:textAlignment="center"
@@ -19,30 +18,33 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         android:textColor="@color/header_purple"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.075" />
 
     <TextView
         android:id="@+id/currentLocationHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:text="@string/current_location"
         android:textAllCaps="true"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/teal_700"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/header" />
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        app:layout_constraintVertical_bias="0.05" />
 
     <TextView
-        android:id="@+id/currentLocation"
+        android:id="@+id/driverCurrentLocation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="1234 Example Blvd"
+        android:text="@string/waiting_for_driver"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,14 +63,14 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/currentLocation" />
+        app:layout_constraintTop_toBottomOf="@+id/driverCurrentLocation" />
 
     <TextView
-        android:id="@+id/destination"
+        android:id="@+id/driverDestination"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="1234 Example Blvd"
+        android:text="@string/waiting_for_driver"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -87,14 +89,14 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/destination" />
+        app:layout_constraintTop_toBottomOf="@+id/driverDestination" />
 
     <TextView
-        android:id="@+id/phoneNumber"
+        android:id="@+id/driverPhoneNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="1234567890"
+        android:text="@string/waiting_for_driver"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -102,22 +104,12 @@
         app:layout_constraintTop_toBottomOf="@+id/phoneNumberHeader" />
 
     <Button
-        android:id="@+id/refresh"
+        android:id="@+id/toPassengerLogout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:text="@string/refresh"
-        app:layout_constraintBottom_toTopOf="@+id/logout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/logout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
-        android:text="@string/logout"
+        android:text="@string/next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/driverPhoneNumber" />
 </androidx.constraintlayout.widget.ConstraintLayout>

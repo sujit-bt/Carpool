@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">RideShare</string>
+    <string name="app_name">DriveShare</string>
     <string name="i_am_a_driver">I am a Driver</string>
     <string name="i_am_a_passenger">I am a Passenger</string>
     <string name="who_are_you">Who are you?</string>
@@ -18,16 +18,20 @@
     <string name="phone">Phone</string>
     <string name="order">Order</string>
     <string name="your_passenger">Your Passenger</string>
-    <string name="current_location">Current Location</string>
-    <string name="destination">Destination</string>
     <string name="phone_number">Phone Number</string>
     <string name="directions_to_passenger">Directions to Passenger</string>
     <string name="next">Next</string>
     <string name="go_to_passenger_s_destination">Go to Passenger\'s Destination</string>
-    <string name="please_enter_your_information">Please enter your information.</string>
-    <string name="your_info">Your Info</string>
     <string name="your_info">Your Info</string>
     <string name="please_enter_your_information">Please enter your information.</string>
     <string name="your_driver">Your Driver</string>
     <string name="refresh">Refresh</string>
+    <string name="thank_you">Thank you!</string>
+    <string name="you_have_dropped_off_your_passenger">You have dropped off your passenger!</string>
+    <string name="go_to_your_destination">Go To Your Destination</string>
+    <string name="waiting_for_driver">Waiting for Driver...</string>
+    <string name="waiting_for_passenger">Waiting for Passenger...</string>
+    <string name="close_app">Close App</string>
+    <string name="logout_nsuccessful">Logout\nSuccessful!</string>
+    <string name="back_to_home">Back to Home</string>
 </resources>
