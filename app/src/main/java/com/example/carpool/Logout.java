@@ -7,14 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class PassengerLogout extends AppCompatActivity {
+public class Logout extends AppCompatActivity {
 
     Button mBack, mClose;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_passenger_logout);
+        setContentView(R.layout.activity_logout);
 
         mBack = (Button) findViewById(R.id.backHome);
         mClose = (Button) findViewById(R.id.closeApp);
@@ -22,7 +22,7 @@ public class PassengerLogout extends AppCompatActivity {
         mBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(PassengerLogout.this, MainActivity.class);
+                Intent intent = new Intent(Logout.this, MainActivity.class);
                 startActivity(intent);
                 finish();
             }

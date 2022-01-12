@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Carpool">
         <activity
-            android:name=".PassengerLogout"
+            android:name=".Logout"
             android:exported="false" />
         <activity
             android:name=".DriverPassengerInfoDisplay"
