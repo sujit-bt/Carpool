@@ -95,7 +95,7 @@ public class DriverDestination extends AppCompatActivity {
             public void onClick(View v) {
                 // Sets all the child values of the user to "logout" to avoid accidentally connecting with another passenger
                 PersonInfo info = new PersonInfo();
-                info.logOutUser();
+                info.setAllAttributes("logout");
                 user.setValue(info);
 
                 // Logs out user

@@ -172,7 +172,7 @@ public class PassengerDriverInfoDisplay extends AppCompatActivity {
 
                 // sets all the user's values to "logout" so driver's won't accidentally connect to the passenger
                 PersonInfo info = new PersonInfo();
-                info.logOutUser();
+                info.setAllAttributes("logout");
                 user.setValue(info);
 
                 // sign out user and change activity to Logout
