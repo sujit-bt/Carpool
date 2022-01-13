@@ -40,43 +40,88 @@ public class PersonInfo {
         this.connectedTo = "";
     }
 
+    /**
+     * Changes the cLocation attribute
+     *
+     * @param cLocation current location
+     */
     public void setcLocation(String cLocation) {
         this.cLocation = cLocation;
     }
 
+    /**
+     * Gets the Current location attribute
+     *
+     * @return current location as a string
+     */
     public String getcLocation() {
         return this.cLocation;
     }
 
+    /**
+     * Sets destination attribute
+     *
+     * @param destination destination
+     */
     public void setDestination(String destination) {
         this.destination = destination;
     }
 
+    /**
+     * Gets destination attribute
+     *
+     * @return destination attribute as a string
+     */
     public String getDestination() {
         return this.destination;
     }
 
+    /**
+     * Sets phoneNumber attribute
+     *
+     * @param phoneNumber phone number
+     */
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
+    /**
+     * gets phone number attribute
+     *
+     * @return phone number as a String
+     */
     public String getPhoneNumber() {
         return this.phoneNumber;
     }
 
+    /**
+     * sets connected to attribute
+     *
+     * @param user_id inputted user ID as a string
+     */
     public void setConnectedTo(String user_id) {
         this.connectedTo = user_id;
     }
 
+    /**
+     * gets the connectedTo attribute
+     *
+     * @return user ID stored in the connectedTo attribute as a String
+     */
     public String getConnectedTo() {
         return this.connectedTo;
     }
 
-    public void logOutUser() {
-        this.cLocation = "logout";
-        this.destination = "logout";
-        this.phoneNumber = "logout";
-        this.connectedTo = "logout";
+    /**
+     * Changes all attributes
+     *
+     * @param s String to which all attributes should be changed to
+     */
+    public void setAllAttributes(String s) {
+        this.cLocation = s;
+        this.destination = s;
+        this.phoneNumber = s;
+        this.connectedTo = s;
     }
 
     @Exclude

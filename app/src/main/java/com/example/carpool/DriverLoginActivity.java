@@ -43,10 +43,9 @@ public class DriverLoginActivity extends AppCompatActivity {
     FirebaseAuth.AuthStateListener mAuthStateListener;
 
     /**
-     * This function is called when the DriverLoginActivity is first created
+     * This function is called when the current activity is first created
      *
      * @param savedInstanceState - Stores the most recent data of the activity.
-     *
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,6 +80,11 @@ public class DriverLoginActivity extends AppCompatActivity {
 
         // Controls what happens when the register button is clicked
         mRegister.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Called when button is clicked
+             *
+             * @param v - view that was clicked
+             */
             @Override
             public void onClick(View v) {
 
@@ -95,6 +99,11 @@ public class DriverLoginActivity extends AppCompatActivity {
 
                     // creates a user in firebase database
                     mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(DriverLoginActivity.this, new OnCompleteListener<AuthResult>() {
+                        /**
+                         * is called when the .createUserWithEmailAndPassword() function is finished
+                         *
+                         * @param task - the value returned by the .createUserWithEmailAndPassword() function
+                         */
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
@@ -112,6 +121,11 @@ public class DriverLoginActivity extends AppCompatActivity {
 
         // Controls what happens when the login button is clicked
         mLogin.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Called when button is clicked
+             *
+             * @param v - view that was clicked
+             */
             @Override
             public void onClick(View v) {
                 // gets the email and password strings from the textviews
@@ -124,6 +138,11 @@ public class DriverLoginActivity extends AppCompatActivity {
                 } else {
                     // logs in user in firebase database if the password and email matches to an existing user
                     mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(DriverLoginActivity.this, new OnCompleteListener<AuthResult>() {
+                        /**
+                         * is called when the .signInWithEmailAndPassword() function is finished
+                         *
+                         * @param task - the value returned by the .signInWithEmailAndPassword() function
+                         */
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
