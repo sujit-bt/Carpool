@@ -23,18 +23,23 @@ public class MainActivity extends AppCompatActivity {
      * This function is called when the current activity is first created
      *
      * @param savedInstanceState - Stores the most recent data of the activity.
-     *
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Connects the variables to their respective Buttons
         mDriver = (Button) findViewById(R.id.driver);
         mPassenger = (Button) findViewById(R.id.passengerHeader);
 
         // Controls what happens when the "I am a Driver" button is clicked
         mDriver.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Called when button is clicked
+             *
+             * @param v - view that was clicked
+             */
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, DriverLoginActivity.class);
@@ -46,6 +51,11 @@ public class MainActivity extends AppCompatActivity {
 
         // Controls what happens when the "I am a Passenger" button is clicked
         mPassenger.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Called when button is clicked
+             *
+             * @param v - view that was clicked
+             */
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, PassengerLoginActivity.class);

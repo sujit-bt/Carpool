@@ -20,6 +20,13 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+/**
+ * A Class controlling the processes of the screen of the app where driver information is displayed for passenger.
+ *
+ * @author Sujit Patil
+ * @since JDK 11.0.10
+ * @version 1.0
+ */
 public class PassengerDriverInfoDisplay extends AppCompatActivity {
 
     // logout button
@@ -71,7 +78,7 @@ public class PassengerDriverInfoDisplay extends AppCompatActivity {
 
             /**
              * Called whenever a child value in a database reference has been changed.
-             * Here only the connectedTo child will change when a driver successfully connects to the passenger.
+             * Here only the "connectedTo" child will get changed when a driver successfully connects to the passenger.
              *
              * @param snapshot stores a copy of the child that has been changed
              * @param previousChildName stores the key of the child directly above the changed child
