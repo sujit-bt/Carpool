@@ -13,7 +13,6 @@ import android.widget.Button;
  * @author Sujit Patil
  * @since JDK 11.0.10
  * @version 1.0
- *
  */
 public class MainActivity extends AppCompatActivity {
 
@@ -21,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private Button mDriver, mPassenger;
 
     /**
-     * This function is called when the MainActivity is first created
+     * This function is called when the current activity is first created
      *
      * @param savedInstanceState - Stores the most recent data of the activity.
      *

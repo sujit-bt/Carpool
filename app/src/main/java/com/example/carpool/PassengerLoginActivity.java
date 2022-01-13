@@ -26,7 +26,6 @@ import com.google.firebase.database.FirebaseDatabase;
  * @author Sujit Patil
  * @since JDK 11.0.10
  * @version 1.0
- *
  */
 public class PassengerLoginActivity extends AppCompatActivity {
 
@@ -44,7 +43,7 @@ public class PassengerLoginActivity extends AppCompatActivity {
     FirebaseAuth.AuthStateListener mAuthStateListener;
 
     /**
-     * This function is called when the DriverLoginActivity is first created
+     * This function is called when the current activity is first created
      *
      * @param savedInstanceState - Stores the most recent data of the activity.
      *
